@@ -1,0 +1,179 @@
+body {
+    font-family: Verdana;
+    position: relative;
+}
+
+.side-left, .side-right, .side-test, .setup-left, .side-stat{
+    display: inline-block;
+    min-height: 200px;
+    background-color: papayawhip;
+    position: absolute;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid chocolate;
+}
+.side-left, .setup-left, .side-stat, .side-test {
+    width: 500px;
+    left: 5px;
+}
+.side-left {
+    top: 65px;
+
+} 
+.setup-left {
+    display: none;
+    top: 65px;    
+    z-index: 40;    
+}  
+.side-right {
+    width: 600px;
+    top: 65px;
+    left: 540px;    
+} 
+.side-stat {
+    display: none; 
+    top: 315px;
+    z-index: 40;   
+}  
+.side-test {    
+    top: 315px;
+} 
+.left-test, .right-test {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+h3 {
+    margin: 0px;
+    padding: 5px;
+    display: inline-block;
+}
+h4 {
+    display: inline-block;
+    width: 300px;
+    background-color: papayawhip;
+    position: absolute;
+    border: 1px solid chocolate;
+    color: chocolate;
+    top: -40px;
+    padding: 5px;
+}
+.header {
+    display: inline-block;
+    width: 50px;
+}
+.filter-buttons  {
+    text-align: right;
+}
+.filter {
+    display: inline-block;
+    width: 90px;
+}
+label  {
+    width: 250px;
+    display: inline-block;
+}
+table {
+    border: 1px solid chocolate;
+    border-collapse: collapse;
+    width: auto;
+}
+th, td {
+    border: 1px solid chocolate;
+    padding: 5px;
+}
+th {
+    background-color: navajowhite;
+    color: chocolate;
+}   
+.grupped td:nth-child(4n) {
+    background-color: #fff666;
+}
+.grupped td:nth-child(4n-1) {
+    background-color: lightcyan;
+}
+.grupped td:nth-child(4n-2) {
+    background-color: navajowhite;
+}
+.grupped td:nth-child(4n-3) {
+    background-color: navajowhite;
+    text-align: right;
+}
+   
+#options {
+    width: 530px;
+    text-align:right;
+    padding-bottom: 15px;
+}
+#done {
+    width: 430px;
+    text-align:right;
+}
+#statimg {
+    position: absolute;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid chocolate;
+    top: 0px;
+    right:0px;
+}
+#testword {
+    background-color: navajowhite;
+    text-align: center;
+    font-weight: bold;
+}
+#stat {
+    display: inline-block;
+}
+#shortTimeExample {
+    display: block;
+    min-height: 150px;
+    vertical-align: middle;
+    text-align: center;
+}
+#variants {
+    min-height: 119px;
+}
+#verbHeader {
+    width: 100px;
+}
+#verbRus {
+    width: 180px;
+}
+#headquestion{
+    width:140px;
+    background-color: navajowhite;    
+}
+#headanswer{
+    width:340px;  
+}
+ul {
+    margin-right: 20px;
+}
+li {
+    cursor: pointer;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+#questions {
+    color: blue;
+}
+#rightanswers {
+    color: green;
+}
+#wronganswers {
+    color: red;
+}
+.smallhelp {
+    text-align: right;
+    font-size: 80%;
+}
+.wronganswer {
+    color: red;
+    font-weight: bold;
+}
+.rightanswer {
+    color: green;
+   
+}

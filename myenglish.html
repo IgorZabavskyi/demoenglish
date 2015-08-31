@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en'">
+<head>
+    <title>jQuery English</title>
+    <link href="css/myenglish.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <h3>Learning Phrasal Verbs 2.0</h3>
+    <div id="options">
+    <!--     --> 
+        <input type="image" onclick="switchUkr()" src="images/f-ukr.jpg" title="Switch to Ukrainian">
+        <input type="image" onclick="switchUsa()" src="images/f-usa.jpg" title="Switch to English">
+        <input type="image" onclick="switchRus()" src="images/f-rus.jpg" title="Switch to Russian">
+        <input type="image" onclick="callSetup()" src="images/setup.jpg"  title="Settings" alt="Setup">    
+        <input type="image" onclick="showStat()" src="images/chart1.png" title="Statistics of answers" >
+    </div>
+
+    <div class="setup-left">
+        <h4>Setup</h4>
+        <br><br>
+        <label for="power">Number of answers for test</label>
+        <input type="text" name="power" id="power" value="">
+        <br><br>
+        <label for="delay">Delay after right answer</label>
+        <input type="text" name="delay" id="delay" value="">
+        <br><br>
+        <div id="done" >
+            <input type="button" onclick="doneSetup()" value="Done">
+        </div>
+    </div>
+    <div class="side-left">
+        <h4>Random verb</h4>
+        <p id="word-eng">English Word</p>
+        <p id="word-rus">Russian Word</p>
+        <p id="word-example">Example</p><br>
+        <!--  -->
+        <input type="button" onclick="showEnglish()" id="word" value="Next Word">
+        <input type="button" onclick="showRussian()" id="trans" value="Russian">
+        <input type="button" onclick="showExample()" id="exam" value="Example">
+    </div>             
+    <div class="side-right">
+        <h4>Grupped by:</h4>
+        <div class="filter-buttons" style="display:none"> 
+            <br>
+            <div class="header" >Filters:&nbsp;&nbsp;</div>
+            &nbsp;<input type="button" class="filter" id="showfull" onclick="showFullTable()" value="full">
+            <input type="button" class="filter" id="showverb" onclick="showTableVerbs()" value="verb">
+            <input type="button" class="filter" id="showkeys" onclick="showTableKeys()" value="key">
+        </div>
+        <h5>Verbs</h5>
+        <div id="tableverbs"></div>   
+        <h5>Preposition</h5>        
+        <div id="tablekeys"></div>
+        <h5>Full List</h5>        
+        <div id="tablefull"></div>
+    </div>
+    <div class="side-stat">
+        <h4>Statistics:</h4>
+        <h5>Full List</h5>        
+        <div id="statfull"></div>
+        <div id="done" >
+            <input type="button" onclick="doneStat()" value="Done">
+        </div>
+    </div>    
+    <div class="side-test">
+      <!--    <input type="image" onclick="showStat()" src="images/chart1.png" id="statimg" title="Statistics of answers"> -->
+      <!--  <input type="image" onclick="showStat()" src="images/stat.jpg" id="statimg" title="Statistics of answers">-->
+        <h4>Test</h4>
+        <div id="stat"><br>
+         <input type="button" onclick="showTest('eng')" value="Eng-Rus">
+         <input type="button" onclick="showTest('rus')" value="Rus-Eng">
+          Words: <b id="questions">0</b>, Right: <b id="rightanswers">0</b>, Wrong: <b id="wronganswers">0</b><br><br>
+        </div>
+        <table>
+            <tr><th id="headquestion">&nbsp;English Word&nbsp;</th><th  id="headanswer">&nbsp;Please Select Answer&nbsp;</th></tr>
+            <tr>
+                <td id="testword">Question</td>
+
+                <td>
+                    <div id="variants">
+                        <ul id="initTest">
+
+                        </ul>  
+                    </div>
+                    <div id="shortTimeExample">
+                    Just Example
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="smallhelp"><br>You can adjust the delay</div>
+    </div>     
+</body>
+<script src="js/words.js"></script> 
+<script src="js/myenglish.js"></script>  
+<script src="js/englishtest.js"></script>  
+</html>
